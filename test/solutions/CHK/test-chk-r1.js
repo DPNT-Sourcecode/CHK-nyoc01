@@ -8,5 +8,8 @@ describe('CHK challenge: SKUS', function() {
 	it('should return correct value', function() {
 	    assert.equal(checkout("A"), 50);
         assert.equal(checkout(" "), -1);
+        assert.equal(checkout(""), 0);
+        assert.equal(checkout("ABCa"), -1);
+        assert.equal(checkout("AxA"), -1);
 	});
 });
